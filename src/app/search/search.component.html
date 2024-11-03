@@ -1,0 +1,30 @@
+
+<h4 class="container">Your Search Result</h4>
+<mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon" fontIcon="undo"></mat-icon>
+<span class="container-fluid e-message">{{searchMessage}}</span>
+
+<table class="table table-success table-striped" >
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">City</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Pine</th>
+
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let person of searchResult">
+        <td>{{person.id}} </td>
+        <td>{{person.name}}</td>
+        <td>{{person.email}}</td>
+        <td>{{person.address.city}}</td>
+        <td>{{person.phone}}</td>
+        <td>{{person.company.name}}</td>
+        <td>{{person.address.zipcode}}</td>
+      </tr>      
+    </tbody>
+  </table>

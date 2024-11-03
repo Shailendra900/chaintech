@@ -7,10 +7,10 @@ export interface person {
         street: string,
         suite: string,
         city: string,
-        zipcode: number, //
+        zipcode: number, 
         geo: {
-            lat: number,//
-            lng: number//
+            lat: number,
+            lng: number
         }
     },
     phone: string,

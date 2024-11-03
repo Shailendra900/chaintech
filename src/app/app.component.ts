@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from './service/api.service';
+import { person } from './datatypes';
+import { ActivatedRoute, Router } from '@angular/router';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +10,26 @@ import { ApiService } from './service/api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
-  constructor() {}
+  SearchMessge:string|undefined ;
+  constructor( private route:Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {   
+  
+  }
+  submitSearch(val:string){
+    this.route.navigate([`search/${val}`]);
+    if(!val){
+      this.SearchMessge="Please Enter Value";
+    }
+    setTimeout(() => {
+      this.SearchMessge=undefined;
+      
+    }, 2000);
+  }
+  
+
+  
+
 
 
 }
