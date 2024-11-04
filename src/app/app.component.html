@@ -1,11 +1,12 @@
-<nav class="navbar">
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" #searchInput placeholder="Search here ">
-            <button class="btn btn-primary btn search-btn" (click)="submitSearch(searchInput.value)" >Search</button>
-            <span class="e-message">{{SearchMessge}}</span>
-        </div>
+
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" #searchInput type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" (click)="submitSearch(searchInput.value)" type="submit">Search</button>
+      </form>
     </div>
-</nav>
+    <span class="e-message">{{SearchMessge}}</span>
+  </nav>
 
   <router-outlet></router-outlet>
