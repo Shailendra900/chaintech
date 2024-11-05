@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './search/search.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import {MatIconModule} from '@angular/material/icon';
+import { DetailsPersonComponent } from './details-person/details-person.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    PersonListComponent
+    PersonListComponent,
+    DetailsPersonComponent
   ],
   imports: [
     BrowserModule,

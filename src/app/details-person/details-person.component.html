@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="person-header">
+      <h1 class="page-title">Person Details</h1>
+      <p class="subheading">Detailed information of the person selected</p>
+    </div>
+  
+    <div class="person-card" *ngIf="getdetails">
+      <div class="card-profile">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img" />
+        <div class="profile-info">
+          <h2 class="name">{{getdetails.name}}</h2>
+          <p class="id">ID No: {{getdetails.id}}</p>
+        </div>
+      </div>
+  
+      <div class="details">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><strong>Email:</strong> {{getdetails.email}}</li>
+          <li><strong>Phone:</strong> {{getdetails.phone}}</li>
+          <li><strong>Website:</strong> <a href="http://{{getdetails.website}}" target="_blank">{{getdetails.website}}</a></li>
+        </ul>
+  
+        <h3>Address</h3>
+        <p>{{getdetails.address.street}}, {{getdetails.address.suite}}, {{getdetails.address.city}}, {{getdetails.address.zipcode}}</p>
+        <p><strong>Geo Coordinates:</strong> {{getdetails.address.geo.lat}}, {{getdetails.address.geo.lng}}</p>
+  
+        <h3>Company</h3>
+        <p><strong>{{getdetails.company.name}}</strong> - {{getdetails.company.catchPhrase}}</p>
+        <p>{{getdetails.company.bs}}</p>
+      </div>
+    </div>
+  </div>
+  

@@ -18,4 +18,7 @@ export class ApiService {
   searchList(query:string){
     return this.http.get<person[]>(`https://jsonplaceholder.typicode.com/users?q=${query}`)
   }
+  detailsPerson(id:string){
+    return this.http.get<person>(`https://jsonplaceholder.typicode.com/users/${id}`)
+  }
 }
