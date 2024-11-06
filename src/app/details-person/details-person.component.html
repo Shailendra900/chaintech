@@ -1,10 +1,10 @@
 <div class="container">
-    <div class="person-header">
+    <div class="person-header slide-from-bottom">
       <h1 class="page-title">Person Details</h1>
       <p class="subheading">Detailed information of the person selected</p>
     </div>
   
-    <div class="person-card" *ngIf="getdetails">
+    <div class="person-card  slide-from-bottom" *ngIf="getdetails">
       <div class="card-profile">
         <div class="profile-info">
           <h2 class="name">{{getdetails.name}}</h2>
@@ -12,7 +12,7 @@
         </div>
       </div>
   
-      <div class="details">
+      <div class="details slide-from-bottom">
         <h3>Contact Information</h3>
         <ul>
           <li><strong>Email:</strong> {{getdetails.email}}</li>

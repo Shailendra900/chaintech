@@ -6,3 +6,61 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 15px;
     color: red;
 }
+@keyframes slideFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-from-top {
+    animation: slideFromTop 1s ease-out forwards;
+  }
+  @keyframes slideFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-from-bottom {
+    animation: slideFromBottom 1s ease-out forwards;
+  }
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);  /* Start off-screen to the right */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);  /* End in its original position */
+      opacity: 1;  /* Fully visible */
+    }
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out forwards; /* Trigger the slide-in animation */
+  }
+  
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);  /* Start off-screen to the left */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);  /* End in its original position */
+    opacity: 1;  /* Fully visible */
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards; /* Trigger the slide-in animation */
+}
+  
