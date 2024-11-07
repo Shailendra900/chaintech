@@ -2,7 +2,7 @@
 <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon" fontIcon="undo"></mat-icon>
 <span class="container-fluid e-message">{{searchMessage}}</span>
 
-<div class="container">
+<div class="container slide-in-right">
   <div class="row">
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let person of searchResult; let i = index">
       <a routerLink="/details/{{person.id}}">
