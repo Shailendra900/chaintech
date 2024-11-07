@@ -5,7 +5,12 @@ import { PersonListComponent } from './person-list/person-list.component';
 import { DetailsPersonComponent } from './details-person/details-person.component';
 
 const routes: Routes = [
-  { path: 'search/:query', component:SearchComponent},
+  { path: 'search/:query', 
+    children:[
+      {path:'',component:SearchComponent},
+      {path:"details/:pid",component:DetailsPersonComponent}
+    ]
+  },
   {path:'',component:PersonListComponent},
   {path:'details/:pid',component:DetailsPersonComponent}
 ];
